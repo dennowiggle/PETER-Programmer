@@ -1,0 +1,54 @@
+<!-- PETER-Programmer System Software Programmer
+   - Code & Hardware by Denno Wiggle
+   - https://github.com/dennowiggle/PETER-Programmer
+-->
+<!DOCTYPE html>
+    <head>
+        <title>PETER Programmer</title> 
+        <link rel='stylesheet' type='text/css' href='wtm.css'>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>        
+        <script type="text/javascript" src="peter.js"></script>
+    </head> 
+    <body>
+        <main class='content'>
+            <form id='z80retro' method='post' accept-charset='utf-8' enctype="multipart/form-data"> 
+                <h1>PETER Programmer</h1>
+
+                <h2>Firmware</h2>
+
+                <label>Z80 Flash Image</label>
+                <input type='file' id='flashFileZ80' onchange="validateSizeZ80(this)" name='firmwareZ80'> 
+                <button type=button onclick="uploadFileZ80(this);" id='programButtonZ80'>Program Z80 Flash</button>
+                <div id='progressAreaZ80'>
+                    <br/>
+                </div>
+
+                <button type=button onclick="getBinImage();" id='getBinButton'>Download Saved Image</button>
+                <div id='getBinResult'>
+                    <br/>
+                </div>
+
+                <label>FPGA Flash Image</label>
+                <input type='file' id='flashFileFpga' onchange="validateSizeFpga(this)" name='firmwareFpga'> 
+                <button type=button onclick="uploadFileFpga();" id='programButtonFpga'>Program FPGA Flash</button>
+                <div id='progressAreaFpga'>
+                    <br/>
+                </div>
+
+                <h2>Debug</h2>
+
+                <button type=button onclick="resetZ80();" id='resetButtonZ80'>Reset CPU and FPGA</button>
+                <div id='resetZ80Result'>
+                    <br/>
+                </div>
+
+                <button type=button onclick="resetEsp();" id='resetButtonEsp'>Reset ESP Programmer</button>
+                <div id='resetEspResult'>
+                    <br/>
+                </div>
+                <br/>
+            </form>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!-- PETER-Programmer System Software Programmer
+   - Code & Hardware by Denno Wiggle
+   - https://github.com/dennowiggle/PETER-Programmer
+-->
+<!DOCTYPE html>
+    <head>
+        <title>PETER Programmer</title> 
+        <link rel='stylesheet' type='text/css' href='wtm.css'>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>        
+        <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+    </head> 
+    <body>
+        <main class='content'>
+            <form id='peter' method='post' accept-charset='utf-8' enctype="multipart/form-data"> 
+                <h1>PETER Programmer</h1>
+                <br/>
+                <h2>Select Firmware</h2>
+                <br/>
+                <div class="radio-group">
+                    <label class="radio-item">
+                        <input type="radio" name="option" value="PETER-Programmer-v0.1.3686">
+                        PETER-Programmer-v0.1.3686
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="option" value="2">
+                        Option 2
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="option" value="3">
+                        Option 3
+                    </label>
+                </div>                
+                <br/>
+                <div class="button">
+                    <esp-web-install-button class="invisible"></esp-web-install-button>
+                </div>                
+                <br/>
+            </form>
+        </main>
+    <script>
+      document.querySelectorAll('input[name="option"]').forEach(radio =>
+        radio.addEventListener("change", () => {
+          const button = document.querySelector('esp-web-install-button');
+          button.manifest = `release/manifest/${radio.value}.json`;
+          button.classList.remove('invisible');
+        } 
+        ));
+    </script>
+    </body>
+</html>
