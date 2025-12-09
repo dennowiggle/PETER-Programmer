@@ -3,7 +3,7 @@
   "version": "v0.1.3686",
   "builds": [
     {
-      "chipFamily": "ESP32",
+      "chipFamily": "ESP32-S3",
       "improv": true,
       "parts": [
         { "path": "release/PETER-Programmer-v0.1.3686/bootloader.bin", "offset": 0 },
