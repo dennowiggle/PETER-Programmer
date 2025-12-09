@@ -9,7 +9,8 @@
         { "path": "../PETER-Programmer-v0.1.3686/bootloader.bin", "offset": 0 },
         { "path": "../PETER-Programmer-v0.1.3686/partitions.bin", "offset": 32768 },
         { "path": "../PETER-Programmer-v0.1.3686/boot_app0.bin", "offset": 57344 },
-        { "path": "../PETER-Programmer-v0.1.3686/firmware.bin", "offset": 65536 }
+        { "path": "../PETER-Programmer-v0.1.3686/firmware.bin", "offset": 65536 },
+        { "path": "../PETER-Programmer-v0.1.3686/littlefs.bin", "offset": 6750208 }
       ]
     }
   ]
