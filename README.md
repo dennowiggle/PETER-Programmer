@@ -13,8 +13,10 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
   - NOTE: Often a browser may change to https:// and in that case it needs changed back to http://
 
 * Power cycle after setting the SSID network you want to use.
-  
-![ESP32 Z80 Retro Programmer! WiFi Setup](release/docs/WiFi_Setup.jpg "WiFi Setup")
+
+<div style="width: 75%;">
+![Peter-Programmer WiFi Setup](release/docs/WiFi_Setup.jpg "WiFi Setup")
+</div>
 
 * If having problems setting up WiFi the PETER-Programmer boot-up log can be seen by connecting a physical TTL level serial cable at 115200 on pins.
   - Once you see the menu:
@@ -27,19 +29,25 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
 * Connect local computer to local WiFi network.
 * Open webage and enter the IP address assigned by DHCP server to the PETER-Programmer! 
 
-![ESP32 Z80 Retro Programmer! WiFi Setup](release/docs/PETER-Programmer_WebPage.jpg "Web Page Use")
+<div style="width: 75%;">
+![Peter-Programmer Web Page Use](release/docs/PETER-Programmer_WebPage.jpg "Peter-Programmer Web Page Use")
+</div>
 
 ## Remote Wireless Console - to PETER-Programmer!
 * There is Telnet console access to PETER-Programmer at the same IP address on port 2323.
   - The jumper pins aBOVE need to be connected for WiFi mode.
 
-![Remote Wireless Console - to ESP32 Z80 Programmer!](release/docs/Telnet_ProgrammerConsole_Port_2323.jpg "Remote PETER-Programmer Console")
+<div style="width: 75%;">
+![Remote Wireless Console - Peter-Programmer!](release/docs/Telnet_ProgrammerConsole_Port_2323.jpg "Remote PETER-Programmer Wireless Console")
+</div>
 
 ## Remote Wireless Console - to CPU Console Port
 * There is Telnet console access to the CPU at the same IP address on port 23.
 * Use remote WiFi CPU console access by using PETER-Programmer console to match the baud rate of the ESP32 to the CPU.
 
-![Remote Wireless Console - to Z80 Retro! Console Port](release/docs/Telnet_Cpu_Port_23.jpg "Remote Retro CPU Console")
+<div style="width: 75%;">
+![Remote CPU Wireless Console](release/docs/Telnet_Cpu_Port_23.jpg "Remote CPU Wireless Console")
+</div>
 
 ## Flashing an ESP32 binary on PETER-Programmer
 * To program the ESP32 on the PETER board use the USB JTAG port J1202.
