@@ -1,5 +1,5 @@
 # PETER-Programmer
-The PETER-Programmer is a WiFi interface for the Retro CPU and it can program files to FPGA Flash - CPU boot code and FPGA images, as well as program an eZ80F91 Flash over ZDI. It's also rather useful at providing a CPU reset or a system reset remotely.
+The PETER-Programmer is a WiFi interface for the [Retro-PETER](https://github.com/dennowiggle/Retro-PETER/blob/main/Hardware/) CPU and it can program files to FPGA Flash - CPU boot code and FPGA images, as well as program an eZ80F91 Flash over ZDI. It's also rather useful at providing a CPU reset or a system reset remotely.
 
 ## Information:
 Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Hardware/PETER/output/PETER_V0.0_BW.pdf) for connections.
@@ -89,7 +89,7 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
   - Connect CPU UART1 Rx to J1004.1
   - Connect USB-C cable to J1002
 
-## Connecting up Retro CPU NHACP signals (UART2)
+## Alternate : Connecting up Retro CPU NHACP signals (UART2)
 * To use USB serial interface for UART2
   - Connect CPU UART2 Tx to J1001.6
   - Connect CPU UART2 Rx to J1001.5
