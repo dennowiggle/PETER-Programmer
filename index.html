@@ -25,6 +25,10 @@
                         <input type="radio" name="option" value="PETER-Programmer-v0.1.3686" checked>
                         PETER-Programmer-v0.1.3686
                     </label>
+                    <label class="radio-item">
+                        <input type="radio" name="option" value="Future option">
+                        Future option
+                    </label>
                 </div>                
                 <br/>
                 <div class="custom-esp-tools">
@@ -35,14 +39,28 @@
                 <br/>
             </form>
         </main>
-    <script>
-      document.querySelectorAll('input[name="option"]').forEach(radio =>
-        radio.addEventListener("change", () => {
-          const button = document.querySelector('esp-web-install-button');
-          button.manifest = `release/manifest/${radio.value}.json`;
-          button.classList.remove('invisible');
-        } 
-        ));
-    </script>
+        <script>
+            // Function to set the button's manifest based on the currently checked radio
+            function setButtonManifestFromCheckedRadio() {
+                const selectedRadio = document.querySelector('input[name="option"]:checked');
+                const button = document.querySelector('esp-web-install-button');
+
+                if (selectedRadio && button) {
+                    button.manifest = `release/manifest/${selectedRadio.value}.json`;
+                    // Make sure the button is visible if an option is pre-selected
+                    button.classList.remove('invisible'); 
+                }
+            }
+
+            // Run the function immediately when the script loads
+            setButtonManifestFromCheckedRadio();
+
+            // Event listeners for when the user interacts
+            document.querySelectorAll('input[name="option"]').forEach(radio =>         
+                radio.addEventListener("change", () => {           
+                    setButtonManifestFromCheckedRadio();
+                })          
+            );   
+        </script>
     </body>
 </html>
