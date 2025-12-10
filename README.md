@@ -2,28 +2,7 @@
 System controller SW for the Retro-PETER platform
 
 ## Information:
-The ESP32-S3 SW is in a platformio project format. If using VS Code there is a platformio plugin. Upon opening the project folder the project should self configure.
-
-## ESP32 Module Programming
-* To program the ESP32 on the PETER board use the USB JTAG port J1202.
-
-* Using the [Web](https://dennowiggle.github.io/PETER-Programmer/)
-  - Select the file.
-  - Connect and then upload.
-  - Requires Microsoft Edge or Google Chrome/Chromium.
-
-* Using Windows
-  - Run the flash.bat script that is in the release directory.
-  - e.g. `flash.bat COM3 115200`
-
-* Using Linux/python
-  - Install the programmer `pip install esptool`.
-  - Run the flash.sh script that is in the release directory.
-  - e.g. `sh flash.sh /dev/ttyACM0 115200`
-
-* ~~Using platformio
-  - First upload the filesystem.
-  - Then upload the code.~~
+Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Hardware/PETER/output/PETER_V0.0_BW.pdf) for connections.
 
 ## WiFi Setup
 * On first boot the module enters WiFi host AP mode.
@@ -47,6 +26,36 @@ The ESP32-S3 SW is in a platformio project format. If using VS Code there is a p
 * Open webage and enter the IP address assigned by DHCP server to the PETER-Programmer! 
 
 ![ESP32 Z80 Retro Programmer! WiFi Setup](release/docs/PETER-Programmer_WebPage.jpg "Web Page Use")
+
+## Remote Wireless Console - to PETER-Programmer!
+* There is Telnet console access to PETER-Programmer at the same IP address on port 2323
+  - The jumper pins aBOVE need to be connected for WiFi mode
+
+![Remote Wireless Console - to ESP32 Z80 Programmer!](release/docs/Telnet_ProgrammerConsole_Port_2323.jpg "Remote PETER-Programmer Console")
+
+## Remote Wireless Console - to CPU Console Port
+* There is Telnet console access to the CPU at the same IP address on port 23
+* Connect the CPU console signals to  to the first ESP32 9 pin DIN. It uses the same cable as used originally in the Z80 Retro project.
+* Using console access to the ESP32 Z80 Programmer configure the baud rate to match that of the Z80 Programmer.
+
+![Remote Wireless Console - to Z80 Retro! Console Port](release/docs/Telnet_Cpu_Port_23.jpg "Remote Retro CPU Console")
+
+## ESP32 Module Programming
+* To program the ESP32 on the PETER board use the USB JTAG port J1202.
+
+* Using the [Web](https://dennowiggle.github.io/PETER-Programmer/)
+  - Select the file.
+  - Connect and then upload.
+  - Requires Microsoft Edge or Google Chrome/Chromium.
+
+* Using Windows
+  - Run the flash.bat script that is in the release directory.
+  - e.g. `flash.bat COM3 115200`
+
+* Using Linux/python
+  - Install the programmer `pip install esptool`.
+  - Run the flash.sh script that is in the release directory.
+  - e.g. `sh flash.sh /dev/ttyACM0 115200`
 
 ## Physical Serial Connection to PETER-Programmer Console
 * Connect a TTL level serial cable to
@@ -86,15 +95,3 @@ The ESP32-S3 SW is in a platformio project format. If using VS Code there is a p
   - Connect CPU UART2 Tx to J1001.2
   - Connect CPU UART2 Rx to J1001.1
 
-## Remote Wireless Console - to PETER-Programmer!
-* There is Telnet console access to PETER-Programmer at the same IP address on port 2323
-  - The jumper pins aBOVE need to be connected for WiFi mode
-
-![Remote Wireless Console - to ESP32 Z80 Programmer!](release/docs/Telnet_ProgrammerConsole_Port_2323.jpg "Remote PETER-Programmer Console")
-
-## Remote Wireless Console - to CPU Console Port
-* There is Telnet console access to the CPU at the same IP address on port 23
-* Connect the CPU console signals to  to the first ESP32 9 pin DIN. It uses the same cable as used originally in the Z80 Retro project.
-* Using console access to the ESP32 Z80 Programmer configure the baud rate to match that of the Z80 Programmer.
-
-![Remote Wireless Console - to Z80 Retro! Console Port](release/docs/Telnet_Cpu_Port_23.jpg "Remote Retro CPU Console")
