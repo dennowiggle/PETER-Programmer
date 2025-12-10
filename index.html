@@ -6,33 +6,34 @@
     <head>
         <title>PETER Programmer</title> 
         <link rel='stylesheet' type='text/css' href='data/wtm.css'>
+        <link rel='icon' href='favicon.ico' type='image/x-icon'>
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>        
         <script
-            type="module"
-            src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"
+            type='module'
+            src='https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module'
         ></script>        
     </head> 
     <body>
         <main class='content'>
-            <form id='peter' method='post' accept-charset='utf-8' enctype="multipart/form-data"> 
+            <form id='peter' method='post' accept-charset='utf-8' enctype='multipart/form-data'> 
                 <h1>PETER Programmer</h1>
                 <h2>Select Firmware</h2>
                 <br/>
-                <div class="radio-group">
-                    <label class="radio-item">
-                        <input type="radio" name="option" value="PETER-Programmer-v0.1.3685" checked>
+                <div class='radio-group'>
+                    <label class='radio-item'>
+                        <input type='radio' name='option' value='PETER-Programmer-v0.1.3685' checked>
                         PETER-Programmer-v0.1.3685
                     </label>
-                    <label class="radio-item">
-                        <input type="radio" name="option" value="Future option">
+                    <label class='radio-item'>
+                        <input type='radio' name='option' value='Future option'>
                         Future option
                     </label>
                 </div>                
                 <br/>
-                <div class="custom-esp-tools">
-                    <esp-web-install-button class="invisible">
-                        <button slot="activate" class="button">Install Firmware
+                <div class='custom-esp-tools'>
+                    <esp-web-install-button class='invisible'>
+                        <button slot='activate' class='button'>Install Firmware
                     </esp-web-install-button>
                 </div>                
                 <br/>
@@ -41,11 +42,11 @@
         <script>
             // Function to set the button's manifest based on the currently checked radio
             function setButtonManifestFromCheckedRadio() {
-                const selectedRadio = document.querySelector('input[name="option"]:checked');
+                const selectedRadio = document.querySelector('input[name='option']:checked');
                 const button = document.querySelector('esp-web-install-button');
 
                 if (selectedRadio && button) {
-                    button.manifest = `release/manifest/${selectedRadio.value}.json`;
+                    button.manifest = 'release/manifest/${selectedRadio.value}.json';
                     // Make sure the button is visible if an option is pre-selected
                     button.classList.remove('invisible'); 
                 }
@@ -55,8 +56,8 @@
             setButtonManifestFromCheckedRadio();
 
             // Event listeners for when the user interacts
-            document.querySelectorAll('input[name="option"]').forEach(radio =>         
-                radio.addEventListener("change", () => {           
+            document.querySelectorAll('input[name='option']').forEach(radio =>         
+                radio.addEventListener('change', () => {           
                     setButtonManifestFromCheckedRadio();
                 })          
             );   
