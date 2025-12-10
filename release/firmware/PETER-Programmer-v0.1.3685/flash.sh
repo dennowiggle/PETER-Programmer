@@ -16,7 +16,7 @@ if [ "$#" -eq 2 ]; then
 fi
 echo Flashing to ESP32-S3.
 # Booloader
-esptool --chip esp32s3 --port "$SERIAL" --baud $BAUD --before default-reset --after no-reset   write-flash -e -z --flash-mode dio --flash-freq 80m --flash-size 8MB 0x0 "./bootloader.bin" 
+esptool --chip esp32s3 --port "$SERIAL" --baud $BAUD --before default-reset --after no-reset   write-flash -z --flash-mode dio --flash-freq 80m --flash-size 8MB 0x0 "./bootloader.bin" 
 # Partions
 esptool --chip esp32s3 --port "$SERIAL" --baud $BAUD --before no-reset      --after no-reset   write-flash -z --flash-mode dio --flash-freq 80m --flash-size 8MB 0x8000  "./partitions.bin" 
 # Boot App

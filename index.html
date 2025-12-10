@@ -10,13 +10,13 @@
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>        
         <script
-            type='module'
-            src='https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module'
+            type="module"
+            src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"
         ></script>        
     </head> 
     <body>
         <main class='content'>
-            <form id='peter' method='post' accept-charset='utf-8' enctype='multipart/form-data'> 
+            <form id='peter' method='post' accept-charset='utf-8' enctype="multipart/form-data"> 
                 <h1>PETER Programmer</h1>
                 <h2>Select Firmware</h2>
                 <br/>
@@ -42,11 +42,11 @@
         <script>
             // Function to set the button's manifest based on the currently checked radio
             function setButtonManifestFromCheckedRadio() {
-                const selectedRadio = document.querySelector('input[name='option']:checked');
+                const selectedRadio = document.querySelector('input[name="option"]:checked');
                 const button = document.querySelector('esp-web-install-button');
 
                 if (selectedRadio && button) {
-                    button.manifest = 'release/manifest/${selectedRadio.value}.json';
+                    button.manifest = `release/manifest/${selectedRadio.value}.json`;
                     // Make sure the button is visible if an option is pre-selected
                     button.classList.remove('invisible'); 
                 }
@@ -56,8 +56,8 @@
             setButtonManifestFromCheckedRadio();
 
             // Event listeners for when the user interacts
-            document.querySelectorAll('input[name='option']').forEach(radio =>         
-                radio.addEventListener('change', () => {           
+            document.querySelectorAll('input[name="option"]').forEach(radio =>         
+                radio.addEventListener("change", () => {           
                     setButtonManifestFromCheckedRadio();
                 })          
             );   
