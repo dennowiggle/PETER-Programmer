@@ -35,7 +35,7 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
 
 ## Remote Wireless Console - to PETER-Programmer!
 * There is Telnet console access to PETER-Programmer at the same IP address on port 2323.
-  - The jumper pins aBOVE need to be connected for WiFi mode.
+  - The jumper pins above need to be connected for WiFi mode.
 
 <p align="center">
 	<img src=release/docs/Telnet_ProgrammerConsole_Port_2323.jpg width=75% alt="Remote PETER-Programmer Wireless Console">
