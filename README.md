@@ -1,17 +1,17 @@
 # PETER-Programmer
-PETER-Programmer is a WiFi interface for the [Retro-PETER](https://github.com/dennowiggle/Retro-PETER/blob/main/Hardware/) CPU and it can program files to FPGA Flash - CPU boot code and FPGA images, as well as program and debug an eZ80F91 over ZDI. It's also rather useful at providing a CPU reset or a system reset remotely.
+PETER-Programmer is a WiFi interface for the [Retro-PETER](https://github.com/dennowiggle/Retro-PETER/blob/main/Hardware/) CPU and it can program CPU boot code and FPGA images to FPGA Flash, as well as program and debug an eZ80F91 over ZDI. It's also rather useful at providing a CPU reset or a system reset remotely.
 
 ## Information:
 Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Hardware/PETER/output/PETER_V0.0_BW.pdf) for connections.
 
 ## WiFi Setup
-* On first boot the module enters WiFi host AP mode.T The purpose of this mode is to join the board WiFi to the local router WiFi.
-  - Connect local computer to the board WiFi network SSID `PETER-programmer` with password `Z80-Nouveau!`
-  - If the local computer is set for DHCP it should be assigned an address on the PETER-Programmer network 192.168.4.x If not manually configure local computer IP address to 192.168.4.2
+* On first boot the module enters WiFi host AP mode. The purpose of this mode is to join the board WiFi to the local router WiFi.
+  - Connect the local computer to the board WiFi network SSID `PETER-programmer` with password `Z80-Nouveau!`
+  - If the local computer is set for DHCP it should be assigned an address on the PETER-Programmer network with an IP address of 192.168.4.x. If not, manually configure the local computer IP address to 192.168.4.2
   - PETER-Programmer WiFi setup IP address is 192.168.4.1
-  - Open a webpage at address http://192.168.4.1 to set the WiFi parameters for WiFi client mode in the local network environment. 
+  - Open a browser at address http://192.168.4.1 to set the WiFi parameters for WiFi client mode in the local router network environment. 
   - NOTE: Join the board to a 2.4GHz network.
-  - NOTE: Often a browser may change to https:// and in that case it needs changed back to http://
+  - NOTE: Often a browser may change to https:// and in that case it needs to be changed back to http://
 
 * Power cycle the board after setting the router network SSID you want to use.
 
@@ -26,8 +26,8 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
 ## Web Page Use
 * On the local WiFi router find the new IP address that the DHCP server assigned to the board.
 * Alternatively connect a serial cable to PETER Programmer as [described below](#physical-serial-connection-to-peter-programmer-console) and type W to see the WiFi address assigned.
-* Connect local computer to the same network that the board is on.
-* Open webage and enter the IP address assigned by DHCP server to the PETER-Programmer! Use http:// and NOT https://
+* Configure the local computer back to use the local router network. The PETER-Programmer should be on the same network now.
+* Open a browser and enter the IP address assigned by DHCP server to the PETER-Programmer! Use http:// and NOT https://
 
 <p align="center">
 	<img src=release/docs/PETER-Programmer_WebPage.jpg width=50% alt="Peter-Programmer Web Page Use">
@@ -64,7 +64,7 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
 
 * Using Linux/Python
   - Install the programmer `pip install esptool`.
-  - Run the flash.sh script that is in the release directory.
+  - Run the flash.sh script that is in the `release/firmware/` image directory.
   - e.g. `sh flash.sh /dev/ttyACM0 115200`
 
 ## Physical Serial Connection to PETER-Programmer Console
