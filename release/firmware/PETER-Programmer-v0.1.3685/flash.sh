@@ -1,5 +1,5 @@
 #! /bin/bash
-BAUD=921600
+BAUD=115200
 
 if [ "$#" -eq 0 ] || [ "$#" -gt 2 ]; then
     echo Usage: flash [SERIAL_PORT] \<BAUDRATE\>

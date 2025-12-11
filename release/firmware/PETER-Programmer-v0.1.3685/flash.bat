@@ -11,7 +11,7 @@ exit /b %ERRORLEVEL%
 
 :baudrate
 IF defined baudrate GOTO :flash
-CALL SET "baudrate=921600"
+CALL SET "baudrate=115200"
 
 :flash
 ECHO Flashing to ESP32-S3.

@@ -57,6 +57,7 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
   - Install firmware.
   - Upon completion select `logs and console` and then click on reset to reset the board.
   - Requires Microsoft Edge or Google Chrome/Chromium.
+  - After a power cycle there is a need to [setup WiFi again](#WiFi-Setup) on the board as NVRAM will be erased.
 
 * Using Windows
   - Run the flash.bat script that is in the `release/firmware/` image directory.
