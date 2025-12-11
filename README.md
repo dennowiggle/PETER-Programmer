@@ -58,6 +58,7 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
   - Upon completion select `logs and console` and then click on reset to reset the board.
   - Requires Microsoft Edge or Google Chrome/Chromium.
   - After a power cycle there is a need to [setup WiFi again](#WiFi-Setup) on the board as NVRAM will be erased.
+  - Remember http:// and NOT https:// (browsers change to second without warning if no connect).
 
 * Using Windows
   - Run the flash.bat script that is in the `release/firmware/` image directory.
@@ -67,6 +68,7 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
   - Install the programmer `pip install esptool`.
   - Run the flash.sh script that is in the `release/firmware/` image directory.
   - e.g. `sh flash.sh /dev/ttyACM0 115200`
+  - Power cycle the board (JTAG reset not the same in Linux as Windows).
 
 ## Physical Serial Connection to PETER-Programmer Console
 * Connect a TTL level serial cable to

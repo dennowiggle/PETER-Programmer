@@ -25,5 +25,4 @@ REM firmware
 ".\esptool.exe" --chip esp32s3 --port %comport% --baud %baudrate% --before no-reset      --after no-reset   write-flash -z --flash-mode dio --flash-freq 80m --flash-size 8MB 0x10000  ".\firmware.bin" 
 REM Filesystem
 ".\esptool.exe" --chip esp32s3 --port %comport% --baud %baudrate% --before no-reset      --after hard-reset write-flash -z --flash-mode dio --flash-freq 80m --flash-size 8MB 0x00670000 ".\littlefs.bin"
-exit
 
