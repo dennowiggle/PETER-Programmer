@@ -76,6 +76,11 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
   - J1105.12 TX (ESP32 Rx)
   - J1105.13 GND
 
+## Alternate : USB Serial Connection to PETER-Programmer Console
+* Connect a USB-C cable to J1005 (right USB socket)
+  - Jumper wire J1105.11 (ESP32 Tx) to J1001.6 (USB Rx)
+  - Jumper wire J1105.12 (ESP32 Rx) to J1001.5 (USB Tx)
+
 ## Connecting FPGA UART's to WiFi
 * UART1 Console
   - Connect Jumper J1004 pin 2 to 4, and pin 1 to 3.
@@ -85,10 +90,10 @@ Refer to the [schematic](https://github.com/dennowiggle/Retro-PETER/blob/main/Ha
 ## Connecting FPGA UART's to USB
 * UART1
   - Connect Jumper J1004 pin 4 to 6, and pin 3 to 5.
-  - Connect USB-C cable to J1002
+  - Connect USB-C cable to J1002 (left USB socket)
 * UART2
   - Connect Jumper J1001 pin 4 to 6, and pin 3 to 5.
-  - Connect USB-C cable to J1005
+  - Connect USB-C cable to J1005 (right USB socket)
 
 ## Alternate : Connecting up Retro CPU console signals (UART1)
 * To use USB serial interface for UART1 console.
